@@ -7,41 +7,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
     *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-    body{color:#e2e8f0;background:#0f172a;line-height:1.7;}
+    body{color:#334155;background:#f8fafc;line-height:1.7;}
     .container{max-width:1100px;margin:0 auto;padding:0 20px;}
     
     /* Header & Navigation */
-    .navbar{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 5%;background:#020617;position:sticky;top:0;z-index:1000;border-bottom:1px solid #1e293b;}
-    .logo{font-weight:800;font-size:1.5rem;color:#f8fafc;letter-spacing:-1px;}
+    .navbar{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 5%;background:white;position:sticky;top:0;z-index:1000;border-bottom:1px solid #e2e8f0;}
+    .logo{font-weight:800;font-size:1.5rem;color:#0f172a;letter-spacing:-1px;}
     .nav-links{display:flex;gap:1.5rem;list-style:none;}
-    .nav-links a{color:#94a3b8;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;cursor:pointer;font-weight:600;}
-    .nav-links a:hover{color:#38bdf8;}
+    .nav-links a{color:#475569;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;cursor:pointer;font-weight:600;}
+    .nav-links a:hover{color:#0284c7;}
     
-    /* Hero */
-    .hero{height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;}
-    .hero h1{font-size:3rem;font-weight:800;margin-bottom:1rem;color:#f8fafc;}
-    .btn{background:#38bdf8;color:#0f172a;padding:1rem 2rem;border-radius:2px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer;text-transform:uppercase;font-size:0.8rem;margin-top:2rem;}
+    /* Hero - Subtle Blue Gradient */
+    .hero{height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;background:linear-gradient(135deg,#0ea5e9,#0284c7);color:white;}
+    .hero h1{font-size:3rem;font-weight:800;margin-bottom:1rem;}
+    .btn{background:white;color:#0284c7;padding:1rem 2rem;border-radius:2px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer;text-transform:uppercase;font-size:0.8rem;margin-top:2rem;}
     
     /* Sections */
     .section-wrapper{padding:5rem 0;}
-    h2{font-size:2rem;color:#f8fafc;margin-bottom:3rem;text-align:center;}
-    .card{padding:2rem;background:#1e293b;border:1px solid #334155;margin-bottom:1rem;}
+    h2{font-size:2rem;color:#0f172a;margin-bottom:3rem;text-align:center;letter-spacing:-1px;}
+    .card{padding:2rem;background:white;border:1px solid #e2e8f0;margin-bottom:1rem;transition:0.3s;}
+    .card:hover{border-color:#0284c7;box-shadow:0 10px 15px -3px rgba(0,0,0,0.1);}
     .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
     
     /* Team & Gallery */
     .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
-    .team-member{text-align:center;background:#1e293b;padding:2rem;}
+    .team-member{text-align:center;background:white;padding:2rem;border:1px solid #e2e8f0;}
     .team-member img{width:100px;height:100px;object-fit:cover;border-radius:50%;margin-bottom:1rem;}
     .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;}
     .gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:2px;}
     
-    /* Mobile Fixes */
+    /* Mobile */
     @media(max-width:768px){
-        .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#020617;flex-direction:column;padding:2rem;text-align:center;}
+        .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:white;flex-direction:column;padding:2rem;text-align:center;border-bottom:1px solid #e2e8f0;}
         .nav-links.show{display:flex;}
-        .burger{display:block;cursor:pointer;}
+        .burger{display:block;cursor:pointer;color:#0f172a;font-size:1.5rem;}
     }
-    .burger{display:none;color:white;font-size:1.5rem;}
+    .burger{display:none;}
 </style>
 </head>
 <body>
@@ -72,11 +73,11 @@
 <section id="about" class="section-wrapper">
 <div class="container">
   <h2>The Firm</h2>
-  <p style="text-align:center; max-width: 700px; margin: 0 auto;">Founded in 2018, MAZ & CO CONSULTING delivers strategy and hardware solutions across the USA, South Africa, Zimbabwe, the UK, and Dubai.</p>
+  <p style="text-align:center; max-width: 700px; margin: 0 auto; color:#475569;">Founded in 2018, MAZ & CO CONSULTING delivers strategy and hardware solutions across the USA, South Africa, Zimbabwe, the UK, and Dubai.</p>
 </div>
 </section>
 
-<section id="services" class="section-wrapper">
+<section id="services" class="section-wrapper" style="background:white;">
 <div class="container">
   <h2>Core Services</h2>
   <div class="service-grid">
@@ -98,14 +99,14 @@
 </div>
 </section>
 
-<section id="team" class="section-wrapper">
+<section id="team" class="section-wrapper" style="background:white;">
 <div class="container">
   <h2>Leadership</h2>
   <div class="team-grid">
-    <div class="team-member"><img src="images/abel-mazuru.jpg"><h3>Abel Mazuru</h3><p style="color:#38bdf8;">CEO</p></div>
-    <div class="team-member"><img src="images/kgomotso-shihlane.jpg"><h3>Kgomotso Shihlane</h3><p style="color:#38bdf8;">General Manager</p></div>
-    <div class="team-member"><img src="images/tanaka-shumba.jpg"><h3>Tanaka Shumba</h3><p style="color:#38bdf8;">General Manager</p></div>
-    <div class="team-member"><img src="images/mitchel-mutongwizo.jpg"><h3>Mitchel Mutongwizo</h3><p style="color:#38bdf8;">Marketing Manager</p></div>
+    <div class="team-member"><img src="images/abel-mazuru.jpg"><h3>Abel Mazuru</h3><p style="color:#0284c7;">CEO</p></div>
+    <div class="team-member"><img src="images/kgomotso-shihlane.jpg"><h3>Kgomotso Shihlane</h3><p style="color:#0284c7;">General Manager</p></div>
+    <div class="team-member"><img src="images/tanaka-shumba.jpg"><h3>Tanaka Shumba</h3><p style="color:#0284c7;">General Manager</p></div>
+    <div class="team-member"><img src="images/mitchel-mutongwizo.jpg"><h3>Mitchel Mutongwizo</h3><p style="color:#0284c7;">Marketing Manager</p></div>
   </div>
 </div>
 </section>
@@ -117,19 +118,19 @@
 </div>
 </section>
 
-<section id="contact" class="section-wrapper">
+<section id="contact" class="section-wrapper" style="background:white;">
 <div class="container">
   <h2>Contact</h2>
   <form class="contact-form" style="max-width:500px; margin:0 auto;">
-    <input type="text" placeholder="Name" style="width:100%; padding:1rem; margin-bottom:1rem; border:1px solid #334155; background:#1e293b; color:white;">
-    <input type="email" placeholder="Email" style="width:100%; padding:1rem; margin-bottom:1rem; border:1px solid #334155; background:#1e293b; color:white;">
-    <textarea placeholder="Message" rows="5" style="width:100%; padding:1rem; margin-bottom:1rem; border:1px solid #334155; background:#1e293b; color:white;"></textarea>
-    <button type="submit" class="btn" style="width:100%;">Submit Inquiry</button>
+    <input type="text" placeholder="Name" style="width:100%; padding:1rem; margin-bottom:1rem; border:1px solid #cbd5e1; background:#f8fafc;">
+    <input type="email" placeholder="Email" style="width:100%; padding:1rem; margin-bottom:1rem; border:1px solid #cbd5e1; background:#f8fafc;">
+    <textarea placeholder="Message" rows="5" style="width:100%; padding:1rem; margin-bottom:1rem; border:1px solid #cbd5e1; background:#f8fafc;"></textarea>
+    <button type="submit" class="btn" style="width:100%; background:#0284c7; color:white;">Submit Inquiry</button>
   </form>
 </div>
 </section>
 
-<footer style="text-align:center; padding:3rem; background:#020617;">
+<footer style="text-align:center; padding:3rem; background:#0f172a; color:#94a3b8;">
   <p>&copy; 2018–2026 MAZ & CO CONSULTING.</p>
 </footer>
 
