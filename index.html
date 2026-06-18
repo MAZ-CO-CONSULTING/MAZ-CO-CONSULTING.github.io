@@ -23,7 +23,8 @@ body{color:#222;background:#f9f9f9;line-height:1.6;}
 h2{text-align:center;color:#2b2d42;margin-bottom:2rem;}
 .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
 .service{padding:1.5rem;background:#f1f1f1;border-radius:10px;text-align:center;}
-.service h3{margin:1rem 0;color:#0077b6;}
+.service img{width:100%; height:150px; object-fit:cover; border-radius:5px; margin-bottom:1rem;}
+.service h3{margin-bottom:0.5rem;color:#0077b6;}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
 .team-member{text-align:center;}
 .team-member img{width:150px;height:150px;object-fit:cover;border-radius:50%;border:3px solid #0077b6;margin-bottom:1rem;}
@@ -77,9 +78,18 @@ footer{text-align:center;padding:2rem;background:#2b2d42;color:white;}
 <section id="hardware" class="services">
   <h2>Hardware Solutions (Bulk & Corporate)</h2>
   <div class="service-grid">
-    <div class="service"><h3>Laptops</h3><p>Corporate fleet procurement.</p></div>
-    <div class="service"><h3>Printers</h3><p>High-volume office solutions.</p></div>
-    <div class="service"><h3>Scanners</h3><p>Bulk document digitization.</p></div>
+    <div class="service">
+        <img src="images/laptop.jpg" alt="Laptops">
+        <h3>Laptops</h3><p>Corporate fleet procurement.</p>
+    </div>
+    <div class="service">
+        <img src="images/printer.jpg" alt="Printers">
+        <h3>Printers</h3><p>High-volume office solutions.</p>
+    </div>
+    <div class="service">
+        <img src="images/scanner.jpg" alt="Scanners">
+        <h3>Scanners</h3><p>Bulk document digitization.</p>
+    </div>
   </div>
   <div style="text-align:center; margin-top:30px;"><a href="#contact" class="btn">Request Bulk Quote</a></div>
 </section>
