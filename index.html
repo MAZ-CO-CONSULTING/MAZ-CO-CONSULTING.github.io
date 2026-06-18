@@ -6,39 +6,47 @@
 <title>MAZ & CO CONSULTING | International Strategy</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{color:#334155;background:#f8fafc;line-height:1.7;}
-.container{max-width:1100px;margin:0 auto;padding:0 40px;}
-.navbar{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 10%;background:rgba(255,255,255,0.95);backdrop-filter:blur(5px);position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid #e2e8f0;}
-.logo{font-weight:800;font-size:1.4rem;letter-spacing:-1px;color:#0f172a;}
-.nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{text-decoration:none;color:#475569;font-weight:600;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;cursor:pointer;}
-.nav-links a:hover{color:#0f172a;}
-.hero{height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;background:#0f172a;color:white;padding:0 20px;}
-.hero h1{font-size:3.5rem;font-weight:800;margin-bottom:1rem;letter-spacing:-2px;}
-.hero p{font-size:1.2rem;opacity:0.8;max-width:600px;margin:0 auto 2rem;}
-.btn{background:#38bdf8;color:#0f172a;padding:1rem 2rem;border-radius:2px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer;text-transform:uppercase;font-size:0.8rem;}
-.section-wrapper{padding:7rem 0;}
-.bg-light{background:#fff;}
-.bg-alt{background:#f1f5f9;}
-h2{font-size:2.5rem;color:#0f172a;margin-bottom:3rem;text-align:center;letter-spacing:-1px;}
-.service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem;}
-.card{padding:3rem;background:white;border:1px solid #e2e8f0;transition:all 0.3s;}
-.card:hover{border-color:#38bdf8;box-shadow:0 10px 20px rgba(0,0,0,0.05);}
-.card img{width:100%;height:180px;object-fit:cover;margin-bottom:1.5rem;}
-.card h3{font-size:1.4rem;color:#0f172a;margin-bottom:1rem;}
-.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem;}
-.team-member{text-align:center;background:#fff;padding:2rem;}
-.team-member img{width:120px;height:120px;object-fit:cover;border-radius:50%;margin-bottom:1.5rem;}
-.title{font-size:0.8rem;color:#38bdf8;text-transform:uppercase;font-weight:700;margin-top:0.5rem;}
-.contact-form{max-width:500px;margin:0 auto;}
-.contact-form input,.contact-form textarea{width:100%;padding:1rem;margin-bottom:1rem;border:1px solid #e2e8f0;background:#f8fafc;}
-footer{text-align:center;padding:4rem;background:#0f172a;color:#94a3b8;font-size:0.9rem;}
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+    body{color:#e2e8f0;background:#0f172a;line-height:1.7;}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+    
+    /* Header & Logo Fix */
+    .navbar{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 5%;background:#020617;position:sticky;top:0;z-index:1000;border-bottom:1px solid #1e293b;}
+    .logo{font-weight:800;font-size:1.5rem;color:#f8fafc;letter-spacing:-1px;}
+    .nav-links{display:flex;gap:1.5rem;list-style:none;}
+    .nav-links a{color:#94a3b8;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px;cursor:pointer;font-weight:600;}
+    .nav-links a:hover{color:#38bdf8;}
+    
+    /* Hero */
+    .hero{height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;}
+    .hero h1{font-size:3rem;font-weight:800;margin-bottom:1rem;color:#f8fafc;}
+    .btn{background:#38bdf8;color:#0f172a;padding:1rem 2rem;border-radius:2px;font-weight:800;text-decoration:none;display:inline-block;cursor:pointer;text-transform:uppercase;font-size:0.8rem;margin-top:2rem;}
+    
+    /* Sections */
+    .section-wrapper{padding:5rem 0;}
+    h2{font-size:2rem;color:#f8fafc;margin-bottom:3rem;text-align:center;}
+    .card{padding:2rem;background:#1e293b;border:1px solid #334155;margin-bottom:1rem;}
+    .service-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+    
+    /* Team & Gallery */
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem;}
+    .team-member{text-align:center;background:#1e293b;padding:2rem;}
+    .team-member img{width:100px;height:100px;object-fit:cover;border-radius:50%;margin-bottom:1rem;}
+    
+    /* Mobile Fixes */
+    @media(max-width:768px){
+        .nav-links{display:none;position:absolute;top:100%;left:0;width:100%;background:#020617;flex-direction:column;padding:2rem;text-align:center;}
+        .nav-links.show{display:flex;}
+        .burger{display:block;cursor:pointer;}
+    }
+    .burger{display:none;color:white;font-size:1.5rem;}
 </style>
 </head>
 <body>
+
 <header class="navbar">
   <div class="logo">MAZ & CO</div>
+  <div class="burger" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</div>
   <nav>
     <ul class="nav-links">
       <li><a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">About</a></li>
@@ -53,64 +61,55 @@ footer{text-align:center;padding:4rem;background:#0f172a;color:#94a3b8;font-size
 <section class="hero">
   <div>
     <h1>Global Strategy.</h1>
-    <p>We empower enterprises and brands across the USA, South Africa, Zimbabwe, the UK, and Dubai.</p>
-    <a class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Request Consultation</a>
+    <p>International marketing, strategy, and bulk hardware procurement.</p>
+    <a class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Inquire Now</a>
   </div>
 </section>
 
-<section id="about" class="section-wrapper bg-light">
+<section id="about" class="section-wrapper">
 <div class="container">
   <h2>The Firm</h2>
-  <p style="text-align:center; max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Founded in 2018, MAZ & CO CONSULTING provides elite strategy, market research, and high-end hardware procurement for the modern global enterprise.</p>
+  <p style="text-align:center; max-width: 700px; margin: 0 auto;">Founded in 2018, MAZ & CO CONSULTING delivers strategy and hardware solutions across the USA, South Africa, Zimbabwe, the UK, and Dubai.</p>
 </div>
 </section>
 
-<section id="services" class="section-wrapper bg-alt">
+<section id="services" class="section-wrapper">
 <div class="container">
   <h2>Core Services</h2>
   <div class="service-grid">
-    <div class="card"><h3>Strategy</h3><p>Custom-tailored business strategies for measurable market impact.</p></div>
-    <div class="card"><h3>Research</h3><p>Sophisticated data-driven insights for complex markets.</p></div>
-    <div class="card"><h3>Digital</h3><p>Performance-driven SEO, content, and brand management.</p></div>
+    <div class="card"><h3>Strategy</h3><p>Custom-tailored business strategies.</p></div>
+    <div class="card"><h3>Research</h3><p>Data-driven market intelligence.</p></div>
+    <div class="card"><h3>Digital</h3><p>Performance SEO and branding.</p></div>
   </div>
 </div>
 </section>
 
-<section id="hardware" class="section-wrapper bg-light">
+<section id="hardware" class="section-wrapper">
 <div class="container">
   <h2>Hardware Procurement</h2>
   <div class="service-grid">
-    <div class="card"><img src="images/laptop.jpg" alt="Laptops"><h3>Enterprise Laptops</h3><p>Bulk procurement for high-performance fleets.</p></div>
-    <div class="card"><img src="images/printer.jpg" alt="Printers"><h3>Office Printers</h3><p>Scalable, high-volume office printing systems.</p></div>
-    <div class="card"><img src="images/scanner.jpg" alt="Scanners"><h3>Scanning Solutions</h3><p>Precision digitization for corporate archives.</p></div>
+    <div class="card"><img src="images/laptop.jpg" style="width:100%; height:150px; object-fit:cover;"><h3>Enterprise Laptops</h3></div>
+    <div class="card"><img src="images/printer.jpg" style="width:100%; height:150px; object-fit:cover;"><h3>Office Printers</h3></div>
+    <div class="card"><img src="images/scanner.jpg" style="width:100%; height:150px; object-fit:cover;"><h3>Scanning Systems</h3></div>
   </div>
 </div>
 </section>
 
-<section id="team" class="section-wrapper bg-alt">
+<section id="team" class="section-wrapper">
 <div class="container">
   <h2>Leadership</h2>
   <div class="team-grid">
-    <div class="team-member"><img src="images/abel-mazuru.jpg" alt="Abel"><p style="font-weight:600;">Abel Mazuru</p><p class="title">CEO</p></div>
-    <div class="team-member"><img src="images/kgomotso-shihlane.jpg" alt="Kgomotso"><p style="font-weight:600;">Kgomotso Shihlane</p><p class="title">General Manager</p></div>
-    <div class="team-member"><img src="images/tanaka-shumba.jpg" alt="Tanaka"><p style="font-weight:600;">Tanaka Shumba</p><p class="title">General Manager</p></div>
-    <div class="team-member"><img src="images/mitchel-mutongwizo.jpg" alt="Mitchel"><p style="font-weight:600;">Mitchel Mutongwizo</p><p class="title">Marketing Manager</p></div>
+    <div class="team-member"><img src="images/abel-mazuru.jpg"><h3>Abel Mazuru</h3><p style="color:#38bdf8;">CEO</p></div>
+    <div class="team-member"><img src="images/kgomotso-shihlane.jpg"><h3>Kgomotso Shihlane</h3><p style="color:#38bdf8;">General Manager</p></div>
+    <div class="team-member"><img src="images/tanaka-shumba.jpg"><h3>Tanaka Shumba</h3><p style="color:#38bdf8;">General Manager</p></div>
+    <div class="team-member"><img src="images/mitchel-mutongwizo.jpg"><h3>Mitchel Mutongwizo</h3><p style="color:#38bdf8;">Marketing Manager</p></div>
   </div>
 </div>
 </section>
 
-<section id="contact" class="section-wrapper bg-light">
-<div class="container">
-  <h2>Contact</h2>
-  <form class="contact-form">
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="How can we help you?" rows="5" required></textarea>
-    <button type="submit" class="btn" style="width:100%;">Submit Inquiry</button>
-  </form>
-</div>
-</section>
+<footer style="text-align:center; padding:3rem; background:#020617;">
+  <p>&copy; 2018–2026 MAZ & CO CONSULTING.</p>
+</footer>
 
-<footer><p>&copy; 2018–2026 MAZ & CO CONSULTING. All rights reserved.</p></footer>
 </body>
 </html>
